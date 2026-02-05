@@ -2,10 +2,8 @@
     --ancient-gold: #d4af37;
     --ancient-marble: #f4f1ea;
     --winter-blue: #0077be;
-    --winter-ice: #e0f2f7;
     --deep-navy: #1a2a3a;
     --usa-red: #bd3d44;
-    --yt-red: #ff0000;
 }
 
 body {
@@ -17,89 +15,43 @@ body {
 }
 
 header {
-    background: 
-        linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)),
-        url('https://upload.wikimedia.org/wikipedia/commons/5/5c/Olympic_rings_without_rims.svg');
-    background-size: 400px;
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: 5rem 1rem;
-    text-align: center;
-    border-bottom: 5px solid var(--winter-blue);
+    background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)),
+                url('https://upload.wikimedia.org/wikipedia/commons/5/5c/Olympic_rings_without_rims.svg');
+    background-size: 400px; background-repeat: no-repeat; background-position: center;
+    padding: 5rem 1rem; text-align: center; border-bottom: 5px solid var(--winter-blue);
 }
 
 nav {
-    background: var(--deep-navy);
-    padding: 15px;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    background: var(--deep-navy); padding: 15px; text-align: center;
+    position: sticky; top: 0; z-index: 1000;
 }
 
-nav a {
-    color: white;
-    margin: 0 12px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 0.85rem;
-}
+nav a { color: white; margin: 0 12px; text-decoration: none; font-weight: bold; font-size: 0.85rem; }
 
-main {
-    max-width: 900px;
-    margin: 20px auto;
-    padding: 20px;
-}
+main { max-width: 900px; margin: 20px auto; padding: 20px; }
 
 .card {
-    background: white;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    margin-bottom: 25px;
+    background: white; padding: 25px; border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 25px;
     border-left: 6px solid var(--ancient-gold);
 }
 
 .winter-theme { border-left-color: var(--winter-blue); }
-.usa-theme { border-left-color: var(--usa-red); text-align: center; }
+.usa-theme { border-left-color: var(--usa-red); }
 
-textarea {
-    width: 100%;
-    height: 200px;
-    padding: 15px;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    font-family: inherit;
-    font-size: 1rem;
-    box-sizing: border-box;
-    margin-bottom: 15px;
-}
+.quiz-question { margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid #eee; }
 
 .btn {
-    display: inline-block;
-    padding: 12px 24px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-    border: none;
-    transition: 0.3s;
+    display: inline-block; padding: 10px 18px; text-decoration: none;
+    border-radius: 5px; font-weight: bold; cursor: pointer; border: none;
+    margin: 5px 2px; font-size: 0.9rem; transition: 0.3s;
 }
 
-.btn-submit { 
-    background: var(--deep-navy); 
-    color: white; 
-    width: 100%;
-}
-
-.btn-submit:hover { background: var(--winter-blue); }
-.btn-usa { background: #192f5d; color: white; }
-.btn-video { background: var(--yt-red); color: white; }
+.btn-choice { background: #f0f4f8; color: var(--deep-navy); }
+.btn-choice:hover { background: var(--winter-blue); color: white; }
+.btn-submit { background: var(--deep-navy); color: white; width: 100%; margin-top: 15px; }
+.btn-video { background: #ff0000; color: white; }
 .btn-blue { background: var(--winter-blue); color: white; }
 
-footer { text-align: center; padding: 40px; color: #666; }
-.btn-usa { background: #192f5d; color: white; }
-.btn-video { background: var(--yt-red); color: white; }
-.btn-blue { background: var(--winter-blue); color: white; }
-
+textarea { width: 100%; height: 150px; padding: 15px; border: 2px solid #ddd; border-radius: 8px; margin-bottom: 15px; }
 footer { text-align: center; padding: 40px; color: #666; }
