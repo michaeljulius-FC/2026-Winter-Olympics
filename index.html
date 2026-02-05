@@ -4,6 +4,26 @@
     <meta charset="UTF-8">
     <title>Olympic Winter Games | Team USA Hub</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Ensuring the form button stands out */
+        .btn-submit {
+            display: block;
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(135deg, #00b4db, #0083b0);
+            color: white !important;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 12px;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            transition: opacity 0.3s;
+        }
+        .btn-submit:hover {
+            opacity: 0.9;
+        }
+    </style>
 </head>
 <body>
 
@@ -15,11 +35,11 @@
 
 <nav>
     <a href="#history">History</a>
+    <a href="#quiz">Knowledge Test</a>
     <a href="#athletes">Individual Stars</a>
     <a href="#bobsled">Bobsled</a>
     <a href="#curling">Curling</a>
-    <a href="#writing-prompt">Host Proposal</a>
-    <a href="#quiz">Quiz</a>
+    <a href="#writing">Submit Proposal</a>
 </nav>
 
 <main>
@@ -41,12 +61,19 @@
         </div>
     </div>
 
+    <section id="quiz" class="card" style="text-align: center;">
+        <h2 style="color: var(--deep-ice);">🧠 Knowledge Test</h2>
+        <p><strong>What did winners of the Ancient Games receive?</strong></p>
+        <button class="btn-choice" style="padding: 10px 20px; margin: 5px;" onclick="alert('Not quite!')">Gold Medals</button>
+        <button class="btn-choice" style="padding: 10px 20px; margin: 5px;" onclick="alert('Correct! They were crowned with an olive branch.')">Olive Branch</button>
+    </section>
+
     <section id="athletes" class="card">
         <h2 style="color: var(--usa-red);">⭐ Individual Stars</h2>
         <div class="athlete-grid">
             <div class="athlete-card">
-                <img src="https://res.cloudinary.com/usopc-prod/image/upload/v1686058539/TeamUSA%20Assets/Migration/Malinin_Ilia_032523_1440x810_Updated.jpg" alt="Olain Malinin">
-                <h3>Olain Malinin</h3>
+                <img src="https://res.cloudinary.com/usopc-prod/image/upload/v1686058539/TeamUSA%20Assets/Migration/Malinin_Ilia_032523_1440x810_Updated.jpg" alt="Ilia Malinin">
+                <h3>Ilia Malinin</h3>
                 <p>Figure Skating</p>
             </div>
             <div class="athlete-card">
@@ -63,11 +90,11 @@
     </section>
 
     <section id="bobsled">
-        <div class="card hover-zoom">
+        <div class="card">
             <h2 style="color: var(--usa-red);">🛷 USA Women's Bobsled</h2>
             <img src="https://people.com/thmb/f9wid7LkEYhB4yc8-kUiDS5wDWE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(999x0:1001x2)/women-bobsled-team-2-e778cabfcfb44b71886a550925f16030.jpg" alt="USA Women's Bobsled" style="width:100%; border-radius:10px;">
         </div>
-        <div class="card hover-zoom">
+        <div class="card">
             <h2 style="color: var(--deep-ice);">🛷 USA Men's Bobsled</h2>
             <img src="https://s7d2.scene7.com/is/image/TWCNews/AP25068671472541?wid=1250&hei=703&$wide-bg$" alt="USA Men's Bobsled" style="width:100%; border-radius:10px;">
         </div>
@@ -75,44 +102,25 @@
 
     <section id="curling" class="card">
         <h2 style="color: var(--deep-ice);">🥌 USA Curling</h2>
-        <div class="hover-zoom">
-            <img src="https://images.squarespace-cdn.com/content/v1/5f34a2ea0d87a44cac1ebfb0/a61537a0-8a47-485d-96f9-2e35b5d3d3bc/Screenshot+2021-11-22+182409.png" alt="USA Curling Team" style="width:100%; border-radius:10px;">
-        </div>
+        <img src="https://images.squarespace-cdn.com/content/v1/5f34a2ea0d87a44cac1ebfb0/a61537a0-8a47-485d-96f9-2e35b5d3d3bc/Screenshot+2021-11-22+182409.png" alt="USA Curling Team" style="width:100%; border-radius:10px;">
         <p style="text-align: center; font-weight: bold; margin-top: 15px;">
-            Precision, strategy, and teamwork on the ice. Team USA continues to be a top contender in the international curling arena.
+            Precision, strategy, and teamwork on the ice.
         </p>
     </section>
 
-    <section id="writing-prompt" class="card">
-        <h2 style="color: var(--usa-red);">📝 Olympic Host Proposal</h2>
-        <p><strong>Writing Prompt:</strong> Imagine you are the Mayor of your city. Write a persuasive letter to the IOC explaining why your city should host the next Olympic Games.</p>
+    <section id="writing" class="card">
+        <h2 style="color: var(--usa-red);">📝 Host City Proposal</h2>
+        <p>Now it's your turn! Based on what you've learned about the tradition and logistics of the Games, submit your proposal for the next host city.</p>
+        <p><strong>Assignment:</strong> Explain why your chosen city is prepared for the Olympics, highlighting attractions and sustainability.</p>
         
-        <div style="background: #f9f9f9; padding: 15px; border-radius: 8px; border: 1px solid #ddd; margin-bottom: 20px;">
-            <p><strong>Your Proposal Must Include:</strong></p>
-            <ul style="text-align: left; display: inline-block;">
-                <li>Identify the city name and specific venues.</li>
-                <li>List 3 local attractions for visiting tourists.</li>
-                <li>A plan for environmental sustainability.</li>
-                <li>Explanation of how the Games will benefit the local community.</li>
-            </ul>
-        </div>
-
-        <textarea id="userProposal" placeholder="Dear IOC, I believe my city should host the Games because..." style="width: 100%; height: 200px; padding: 15px; border-radius: 10px; border: 2px solid var(--deep-ice); font-family: sans-serif; resize: vertical;"></textarea>
-        
-        <button class="btn-choice" style="margin-top: 15px;" onclick="submitProposal()">Submit Proposal</button>
-        <div id="feedback" style="margin-top: 10px; font-weight: bold; color: green;"></div>
-    </section>
-
-    <section id="quiz" class="card" style="text-align: center;">
-        <h2>🧠 Knowledge Test</h2>
-        <p><strong>What did winners of the Ancient Games receive?</strong></p>
-        <button class="btn-choice" onclick="alert('Not quite!')">Gold Medals</button>
-        <button class="btn-choice" onclick="alert('Correct!')">Olive Branch</button>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf-NEexvOJTII6fpaNzrQYIUK1ekcORdy_wEF6_bbgfRm4u2Q/viewform?usp=publish-editor" target="_blank" class="btn-submit">
+            CLICK HERE TO SUBMIT YOUR WRITTEN PROPOSAL
+        </a>
     </section>
 </main>
 
 <script>
-    // Countdown Timer Logic
+    // Countdown Timer
     const countdownDate = new Date("Feb 6, 2026 00:00:00").getTime();
     setInterval(function() {
         const now = new Date().getTime();
@@ -121,21 +129,6 @@
         const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         document.getElementById("countdown").innerHTML = "❄️ " + days + "d " + hours + "h until Milano Cortina 2026!";
     }, 1000);
-
-    // Writing Prompt Submission Logic
-    function submitProposal() {
-        const text = document.getElementById("userProposal").value;
-        const feedback = document.getElementById("feedback");
-        
-        if(text.length < 50) {
-            feedback.style.color = "red";
-            feedback.innerHTML = "❌ Your proposal is too short! Please provide more detail.";
-        } else {
-            feedback.style.color = "green";
-            feedback.innerHTML = "✅ Thank you! Your proposal has been submitted for review.";
-            // Here you could send the 'text' to a server or local storage
-        }
-    }
 </script>
 
 </body>
