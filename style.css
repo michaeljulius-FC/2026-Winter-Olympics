@@ -1,39 +1,52 @@
+/* Custom Variables */
 :root {
-    --ice-blue: #e0f7fa;
-    --frost-blue: #b3e5fc;
-    --deep-winter: #01579b;
-    --olympic-gold: #d4af37;
-    --snow-white: #ffffff;
-    --usa-red: #d32f2f;
+    --ancient-gold: #d4af37;
+    --ancient-marble: #f4f1ea;
+    --winter-blue: #0077be;
+    --winter-ice: #e0f2f7;
+    --deep-navy: #1a2a3a;
+    --yt-red: #ff0000;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.6;
-    background-color: var(--ice-blue); /* Icy background */
+    color: #333;
+    background-color: var(--ancient-marble);
     margin: 0;
     scroll-behavior: smooth;
 }
 
+/* Header with Rings */
 header {
-    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8)),
-                url('https://upload.wikimedia.org/wikipedia/commons/5/5c/Olympic_rings_without_rims.svg');
-    background-size: 300px;
+    background: 
+        linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)),
+        url('https://upload.wikimedia.org/wikipedia/commons/5/5c/Olympic_rings_without_rims.svg');
+    background-size: 400px;
     background-repeat: no-repeat;
     background-position: center;
-    padding: 4rem 1rem;
+    color: var(--deep-navy);
+    padding: 6rem 1rem;
     text-align: center;
-    border-bottom: 5px solid var(--deep-winter);
+    border-bottom: 5px solid var(--winter-blue);
 }
 
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+/* Navigation */
 nav {
-    background: var(--deep-winter);
+    background: var(--deep-navy);
     padding: 15px;
     text-align: center;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 nav a {
@@ -41,10 +54,15 @@ nav a {
     margin: 0 15px;
     text-decoration: none;
     font-weight: bold;
-    text-transform: uppercase;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
+    transition: color 0.3s;
 }
 
+nav a:hover {
+    color: var(--ancient-gold);
+}
+
+/* Main Content Containers */
 main {
     max-width: 1000px;
     margin: 20px auto;
@@ -52,87 +70,84 @@ main {
 }
 
 .card {
-    background: var(--snow-white);
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    margin-bottom: 25px;
-    border-top: 4px solid var(--frost-blue); /* Frosted border top */
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+    border-left: 6px solid var(--ancient-gold);
 }
 
-/* History Side-by-Side Grid */
-.comparison-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+.winter-theme {
+    border-left-color: var(--winter-blue);
+    background-color: var(--winter-ice);
 }
 
-.ancient-card { border-left: 6px solid var(--olympic-gold); }
-.modern-card { border-left: 6px solid var(--deep-winter); }
-
-/* Athlete Spotlight */
-.athlete-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
 }
 
-.athlete-card {
-    background: #f8fbff;
-    padding: 15px;
-    border: 1px solid var(--frost-blue);
-    border-radius: 10px;
+th {
+    background-color: var(--deep-navy);
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Interactive Elements */
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-primary { background: var(--winter-blue); color: white; }
+.btn-gold { background: var(--ancient-gold); color: white; }
+
+.video-section {
+    background: #111;
+    color: white;
+    padding: 40px;
+    border-radius: 12px;
     text-align: center;
 }
 
-.athlete-card img {
-    width: 100%;
-    border-radius: 8px;
-    border: 2px solid var(--frost-blue);
-}
-
-/* Choice Buttons */
-.btn-choice {
-    padding: 12px 24px;
-    cursor: pointer;
-    background: var(--snow-white);
-    border: 2px solid var(--frost-blue);
-    border-radius: 30px;
-    margin: 5px;
-    transition: all 0.3s;
-    font-weight: bold;
-}
-
-.btn-choice:hover {
-    background: var(--deep-winter);
+.yt-button {
+    display: inline-block;
+    background: var(--yt-red);
     color: white;
-}
-
-/* Video & Submit Buttons */
-.btn-video {
-    background: #c62828;
-    color: white;
-    padding: 12px 25px;
+    padding: 15px 30px;
     text-decoration: none;
     border-radius: 5px;
-    display: inline-block;
-    margin: 10px;
-}
-
-.btn-submit {
-    display: block;
-    width: 100%;
-    padding: 20px;
-    background: var(--deep-winter);
-    color: white !important;
-    text-align: center;
-    text-decoration: none;
     font-weight: bold;
-    border-radius: 10px;
-    margin-top: 20px;
-    font-size: 1.1rem;
+    margin: 20px 0;
 }
 
-.btn-submit:hover { background: #014175; }
+.schedule-button {
+    display: inline-block;
+    background: var(--winter-blue);
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
 
-@media (max-width: 600px) { .comparison-grid { grid-template-columns: 1fr; } } 
+footer {
+    text-align: center;
+    padding: 40px;
+    font-size: 0.9rem;
+    color: #666;
+}
