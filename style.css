@@ -63,18 +63,38 @@ main {
 .winter-theme { border-left-color: var(--winter-blue); }
 .usa-theme { border-left-color: var(--usa-red); text-align: center; }
 
+textarea {
+    width: 100%;
+    height: 200px;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
 .btn {
     display: inline-block;
     padding: 12px 24px;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-    margin: 10px 5px;
+    cursor: pointer;
+    border: none;
     transition: 0.3s;
 }
 
+.btn-submit { 
+    background: var(--deep-navy); 
+    color: white; 
+    width: 100%;
+}
+
+.btn-submit:hover { background: var(--winter-blue); }
 .btn-usa { background: #192f5d; color: white; }
 .btn-video { background: var(--yt-red); color: white; }
 .btn-blue { background: var(--winter-blue); color: white; }
 
-footer { text-align: center; padding: 40px; color: #666; border-top: 1px solid #ddd; }
+footer { text-align: center; padding: 40px; color: #666; }
