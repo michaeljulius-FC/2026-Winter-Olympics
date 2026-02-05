@@ -23,18 +23,19 @@
 </nav>
 
 <main>
-    <div class="comparison-grid" id="history">
-        <section class="card" style="border-top: 8px solid var(--gold);">
-            <h2>🏛️ Ancient History</h2>
-            <p><strong>Founded:</strong> 776 BC in Greece.</p>
-            <p><strong>Rules:</strong> Only men could compete; winners received an olive branch.</p>
-        </section>
-
-        <section class="card" style="border-top: 8px solid var(--deep-ice);">
-            <h2>❄️ Modern Winter</h2>
-            <p><strong>Founded:</strong> 1924.</p>
-            <p><strong>Rules:</strong> Over 200 countries and women's competitions included.</p>
-        </section>
+    <div class="card" id="history">
+        <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+            <div style="flex: 1; border-left: 5px solid var(--gold); padding-left: 15px;">
+                <h2>🏛️ Ancient History</h2>
+                <p><strong>Founded:</strong> 776 BC in Greece.</p>
+                <p><strong>Rules:</strong> Only men could compete; winners received an olive branch.</p>
+            </div>
+            <div style="flex: 1; border-left: 5px solid var(--deep-ice); padding-left: 15px;">
+                <h2>❄️ Modern Winter</h2>
+                <p><strong>Founded:</strong> 1924.</p>
+                <p><strong>Rules:</strong> Over 200 countries and women's competitions included.</p>
+            </div>
+        </div>
     </div>
 
     <section id="athletes" class="card">
@@ -54,24 +55,24 @@
     </section>
 
     <section id="hockey">
-        <div class="card">
+        <div class="card hover-zoom">
             <h2 style="color: var(--deep-ice);">🏒 USA Men's Hockey</h2>
             <img src="https://platform.milehighhockey.com/wp-content/uploads/sites/107/chorus/uploads/chorus_asset/file/26007325/2216378652.jpg?quality=90&strip=all&crop=0%2C0.0062492188476426%2C100%2C99.987501562305&w=750" 
-                 alt="USA Men's Hockey" style="width:100%; border-radius:15px;">
+                 alt="USA Men's Hockey">
         </div>
 
-        <div class="card">
+        <div class="card hover-zoom">
             <h2 style="color: #0d47a1;">🏒 USA Women's Hockey</h2>
             <img src="https://s.abcnews.com/images/Sports/us-womens-hockey-06-gty-jrl-180222.jpg" 
-                 alt="USA Women's Hockey" style="width:100%; border-radius:15px;">
-            <p style="text-align: center; font-weight: bold; margin-top: 10px;">Consistently one of the top teams in the world, the US Women's team has won medals in every Olympics since 1998.</p>
+                 alt="USA Women's Hockey">
+            <p style="text-align: center; font-weight: bold; margin-top: 15px;">Medalists in every Olympics since 1998.</p>
         </div>
     </section>
 
     <section id="media" class="card" style="text-align: center;">
         <h2>📽️ Olympic Video Center</h2>
         <a href="https://www.youtube.com/watch?v=hEkVE-FdmU4" target="_blank" class="btn-video">📽️ Olympic Sports List</a>
-        <a href="https://www.youtube.com/watch?v=o9NIxidkxXI" target="_blank" class="btn-video" style="background: var(--deep-ice);">🇺🇸 Meet Team USA</a>
+        <a href="https://www.youtube.com/watch?v=o9NIxidkxXI" target="_blank" class="btn-video" style="background: var(--deep-ice);">Meet Team USA</a>
     </section>
 
     <section id="quiz" class="card" style="text-align: center;">
@@ -92,18 +93,13 @@
 </main>
 
 <script>
-    // Countdown Timer Logic
     const countdownDate = new Date("Feb 6, 2026 00:00:00").getTime();
-    const x = setInterval(function() {
+    setInterval(function() {
         const now = new Date().getTime();
         const distance = countdownDate - now;
         const days = Math.floor(distance / (1000 * 60 * 60 * 24));
         const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         document.getElementById("countdown").innerHTML = "❄️ " + days + "d " + hours + "h until Milano Cortina 2026!";
-        if (distance < 0) {
-            clearInterval(x);
-            document.getElementById("countdown").innerHTML = "LET THE GAMES BEGIN!";
-        }
     }, 1000);
 </script>
 
