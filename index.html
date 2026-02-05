@@ -10,78 +10,95 @@
 
 <header>
     <h1>The Olympic Journey</h1>
-    <p>From 776 BC to Milano Cortina 2026</p>
+    <p>Honoring Zeus in 776 BC • Competing in Milano Cortina 2026</p>
 </header>
 
 <nav>
-    <a href="#history">History</a>
-    <a href="#media">Media</a>
-    <a href="#quiz">Quiz</a>
-    <a href="#grammar">Grammar</a>
+    <a href="#history">Ancient History</a>
+    <a href="#media">Video Library</a>
+    <a href="#quiz">Knowledge Test</a>
     <a href="#writing">Writing Task</a>
 </nav>
 
 <main>
     <section id="history" class="card">
-        <h2>🏛️ Ancient Origins</h2>
-        <p>In 776 BC, there was only one event: the <strong>Stade</strong>. By 100 BC, the games expanded to five days and included wrestling and chariot racing[cite: 2, 493, 494]. Winners were presented with an <strong>olive branch</strong>[cite: 494].</p>
+        <h2>🏛️ Ancient Facts</h2>
+        <p>At the first Olympic Games in 776 BCE, there was just one event: the <strong>Stade</strong> (a 200m race). By 100 BCE, the games lasted for five days and included <strong>Hoplitodromos</strong>—running in full armor!</p>
     </section>
 
     <section id="media" class="card winter-theme" style="text-align: center;">
-        <h2>📽️ Olympic Video Center</h2>
-        <a href="https://www.youtube.com/watch?v=hEkVE-FdmU4" target="_blank" class="btn btn-video">Winter Sports List</a>
-        <a href="https://www.youtube.com/watch?v=o9NIxidkxXI" target="_blank" class="btn btn-blue">Current US Olympians</a>
-        <a href="https://www.youtube.com/watch?v=k_mfxRTdrQE" target="_blank" class="btn btn-video">Iconic Moments</a>
+        <h2>📽️ Explore the Games</h2>
+        <a href="https://www.youtube.com/watch?v=hEkVE-FdmU4" target="_blank" class="btn-video">Winter Sports List</a>
+        <a href="https://www.youtube.com/watch?v=o9NIxidkxXI" target="_blank" class="btn-video" style="background:#192f5d;">Team USA Stars</a>
     </section>
 
-    <section id="quiz" class="card">
-        <h2>🧠 Reading Comprehension</h2>
-        <div class="quiz-question">
-            <p><strong>1. What is the main idea of the article?</strong></p>
-            <button class="btn btn-choice" onclick="alert('Try again!')">Ancient Greece</button>
-            <button class="btn btn-choice" onclick="alert('Try again!')">Athens and Paris</button>
-            <button class="btn btn-choice" onclick="alert('Correct!')">A Short History of the Olympics</button>
+    <section id="quiz" class="card" style="text-align: center;">
+        <h2>🧠 Knowledge Test</h2>
+        
+        <div style="margin-bottom: 30px;">
+            <p><strong>1. What did the winner of an Ancient Olympic event receive?</strong></p>
+            <button class="btn-choice" onclick="checkAnswer('A')">A) Gold Medal</button>
+            <button class="btn-choice" onclick="checkAnswer('B')">B) Olive Branch</button>
+            <button class="btn-choice" onclick="checkAnswer('C')">C) Money</button>
+            <p id="quiz-result" style="margin-top: 10px; font-weight: bold;"></p>
         </div>
-        <div class="quiz-question">
-            <p><strong>2. When did the ancient Olympic Games end?</strong></p>
-            <button class="btn btn-choice" onclick="alert('Correct! They ended in 393 AD.')">393 AD</button>
-            <button class="btn btn-choice" onclick="alert('Try again!')">776 BC</button>
-            <button class="btn btn-choice" onclick="alert('Try again!')">1894 AD</button>
+
+        <div style="border-top: 1px solid #eee; padding-top: 20px;">
+            <p><strong>2. In what year were women first allowed to compete?</strong></p>
+            <button class="btn-choice" onclick="checkAnswer2('A')">1896</button>
+            <button class="btn-choice" onclick="checkAnswer2('B')">1900</button>
+            <button class="btn-choice" onclick="checkAnswer2('C')">1924</button>
+            <p id="quiz-result2" style="margin-top: 10px; font-weight: bold;"></p>
         </div>
     </section>
 
-    <section id="grammar" class="card winter-theme">
-        <h2>✍️ Grammar in Context</h2>
-        <p>Choose the correct word: <em>"Every four years, people (1)______ to Olympia."</em></p>
-        <button class="btn btn-choice" onclick="setG('Try again. The text uses past tense.')">travel</button>
-        <button class="btn btn-choice" onclick="setG('Correct! They traveled to Olympia[cite: 3].')">traveled</button>
-        <p id="grammar-feedback" style="margin-top: 10px; font-weight: bold; color: var(--winter-blue);"></p>
-    </section>
-
-    <section id="writing" class="card usa-theme">
-        <h2>📝 Host City Proposal</h2>
-        <p>Explain why your city should host the next Summer Olympic Games.</p>
-        <input type="text" id="studentName" placeholder="Your Name" style="width:100%; padding:10px; margin-bottom:10px;">
+    <section id="writing" class="card">
+        <h2>📝 Writing Prompt</h2>
+        <p>Imagine you are writing to the IOC. Explain why your city should host the next Summer Olympic Games.</p>
+        <input type="text" id="studentName" placeholder="Your Full Name" style="width:100%; padding:10px; margin-bottom:10px; border:1px solid #ddd; border-radius:5px;">
         <textarea id="proposalText" placeholder="Dear IOC..."></textarea>
-        <button class="btn btn-submit" onclick="submitWork()">Submit to Teacher</button>
+        <button class="btn-submit" onclick="submitWork()">Submit to Teacher</button>
     </section>
 </main>
 
 <footer>
-    <p>Winter_Olympics_2026_ILC | Educational Resource</p>
+    <p>Data sourced from History Worksheet - Winter_Olympics_2026_ILC Project</p>
 </footer>
 
 <script>
-    function setG(msg) { document.getElementById('grammar-feedback').innerText = msg; }
-    
+    // Logic for Question 1
+    function checkAnswer(choice) {
+        const result = document.getElementById('quiz-result');
+        if (choice === 'B') {
+            result.innerText = "✅ Correct! They received an olive branch.";
+            result.style.color = "green";
+        } else {
+            result.innerText = "❌ Not quite. (Hint: It grows on a tree)";
+            result.style.color = "red";
+        }
+    }
+
+    // Logic for Question 2
+    function checkAnswer2(choice) {
+        const result = document.getElementById('quiz-result2');
+        if (choice === 'B') {
+            result.innerText = "✅ Correct! Women first competed in Paris in 1900.";
+            result.style.color = "green";
+        } else {
+            result.innerText = "❌ Try again. Check the modern history section.";
+            result.style.color = "red";
+        }
+    }
+
+    // Writing submission logic
     function submitWork() {
         const name = document.getElementById('studentName').value;
         const text = document.getElementById('proposalText').value;
-        const teacherEmail = "your-email@example.com";
         if(name && text) {
-            window.location.href = `mailto:${teacherEmail}?subject=Olympic Writing: ${name}&body=${text}`;
+            window.location.href = `mailto:teacher@example.com?subject=Olympic Writing: ${name}&body=${text}`;
+            alert("Opening your email to send your work!");
         } else {
-            alert("Please enter your name and text.");
+            alert("Please fill in your name and proposal.");
         }
     }
 </script>
