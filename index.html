@@ -1,93 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Olympics: Ancient to Modern</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<header>
-    <h1>The Olympic Journey</h1>
-    <p>From the Temple of Zeus to Milano Cortina 2026</p>
-</header>
-
-<nav>
-    <a href="#history">History</a>
-    <a href="#media">Videos</a>
-    <a href="#quiz">Quiz</a>
-    <a href="#writing">Writing Task</a>
-</nav>
-
 <main>
-    <div class="comparison-grid" id="history">
-        <section class="card">
-            <h2>🏛️ Ancient Facts</h2>
-            <p><strong>Origin:</strong> Held in Olympia to honor Zeus.</p>
-            <p><strong>Timeline:</strong> Started 776 BCE; ended 393 AD.</p>
-            <p><strong>Rules:</strong> Athletes competed naked; married women could not attend.</p>
-        </section>
-
-        <section class="card winter-theme">
-            <h2>❄️ Modern Winter (2026)</h2>
-            <p><strong>Location:</strong> Milano Cortina, Italy.</p>
-            <p><strong>Events:</strong> 100+ events (Skiing, Skeleton, Hockey).</p>
-            <p><strong>Duration:</strong> 17 days (vs. 5 days in Ancient times).</p>
-        </section>
-    </div>
-
-    <section id="media" class="card winter-theme" style="text-align: center;">
-        <h2>📽️ Olympic Resource Center</h2>
-        <p>Explore the sports and meet the athletes:</p>
-        <a href="https://www.youtube.com/watch?v=hEkVE-FdmU4" target="_blank" class="btn-video">📽️ Modern Winter Sports List</a>
-        <a href="https://www.youtube.com/watch?v=o9NIxidkxXI" target="_blank" class="btn-video" style="background: #192f5d;">🇺🇸 Team USA Spotlight</a>
-        <a href="https://www.youtube.com/watch?v=k_mfxRTdrQE" target="_blank" class="btn-video">🏆 Iconic Olympic Moments</a>
-    </section>
-
-    <section id="quiz" class="card" style="text-align: center;">
-        <h2>🧠 Test Your Knowledge</h2>
-        
-        <div style="margin-bottom: 20px;">
-            <p><strong>What did an Ancient Olympic winner receive?</strong></p>
-            <button class="btn-choice" onclick="checkQ('olive', 'correct')">A) Gold Medal</button>
-            <button class="btn-choice" onclick="checkQ('olive', 'win')">B) Olive Branch</button>
-            <button class="btn-choice" onclick="checkQ('olive', 'lose')">C) Money</button>
-            <p id="olive-result" style="margin-top:10px; font-weight:bold;"></p>
+    <section id="athletes" class="card usa-theme">
+        <h2>🇺🇸 Team USA Athlete Spotlight</h2>
+        <div class="athlete-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <div class="athlete-profile">
+                <img src="path-to-athlete1.jpg" alt="Athlete Name" style="width:100%; border-radius: 8px;">
+                <h3>Athlete Name</h3>
+                <p><strong>Sport:</strong> Figure Skating</p>
+                <p><em>Brief Summary:</em> Known for their record-breaking jumps and technical precision.</p>
+            </div>
+            <div class="athlete-profile">
+                <img src="path-to-athlete2.jpg" alt="Athlete Name" style="width:100%; border-radius: 8px;">
+                <h3>Athlete Name</h3>
+                <p><strong>Sport:</strong> Snowboarding</p>
+                <p><em>Brief Summary:</em> A multi-medal winner aiming for gold in Milano Cortina 2026.</p>
+            </div>
         </div>
     </section>
 
+    <section id="media" class="card winter-theme" style="text-align: center;">
+        <h2>📽️ Olympic Resource Center</h2>
+        <a href="https://www.youtube.com/watch?v=hEkVE-FdmU4" target="_blank" class="btn-video">📽️ Modern Winter Sports List</a>
+        <a href="https://www.youtube.com/watch?v=o9NIxidkxXI" target="_blank" class="btn-video" style="background: #192f5d;">🇺🇸 Team USA Spotlight</a>
+    </section>
+
     <section id="writing" class="card">
-        <h2>📝 Writing Task</h2>
-        <p>Imagine you are writing to the IOC. Explain why your city should host the next Summer Olympic Games.</p>
-        <input type="text" id="studentName" placeholder="Student Name" style="width:100%; padding:10px; border:1px solid #ddd; border-radius:5px;">
-        <textarea id="proposalText" placeholder="Dear IOC..."></textarea>
-        <button class="btn-choice" style="width:100%; background:var(--deep-navy); color:white;" onclick="submitWork()">Submit Proposal</button>
+        <h2>📝 Host City Proposal (Linked to Spreadsheet)</h2>
+        <p>Instructions: Click the button below to submit your proposal. Your response will be automatically recorded in the class spreadsheet.</p>
+        
+        <a href="YOUR_GOOGLE_FORM_LINK_HERE" target="_blank" class="btn-submit" style="display:block; text-align:center; text-decoration:none;">
+            Open Submission Form & Spreadsheet
+        </a>
     </section>
 </main>
-
-<script>
-    function checkQ(q, status) {
-        const res = document.getElementById('olive-result');
-        if(status === 'win') {
-            res.innerText = "✅ Correct! The olive branch was the highest honor.";
-            res.style.color = "green";
-        } else {
-            res.innerText = "❌ Not quite! (Hint: It grows on a tree)";
-            res.style.color = "red";
-        }
-    }
-
-    function submitWork() {
-        const name = document.getElementById('studentName').value;
-        const text = document.getElementById('proposalText').value;
-        if(name && text) {
-            window.location.href = `mailto:teacher@example.com?subject=Olympic Task: ${name}&body=${text}`;
-        } else {
-            alert("Please fill in your name and writing response.");
-        }
-    }
-</script>
-
-</body>
-</html>
