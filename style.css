@@ -135,4 +135,4 @@ main {
 
 .btn-submit:hover { background: #014175; }
 
-@media (max-width: 600px) { .comparison-grid { grid-template-columns: 1fr; } }
+@media (max-width: 600px) { .comparison-grid { grid-template-columns: 1fr; } } 
