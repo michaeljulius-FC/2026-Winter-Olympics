@@ -3,91 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Winter Olympics 2026 ILC | History Project</title>
+    <title>Olympics Portal: Ancient to 2026</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
     <h1>The Olympic Journey</h1>
-    <p>From the Temple of Zeus to Milano Cortina 2026</p>
+    <p>Established 776 BC • Moving Toward Milano Cortina 2026</p>
 </header>
 
-<nav style="text-align: center; margin-bottom: 20px;">
-    <a href="#history" style="margin: 0 15px; text-decoration: none; color: #8b4513; font-weight: bold;">Ancient History</a>
-    <a href="#events" style="margin: 0 15px; text-decoration: none; color: #8b4513; font-weight: bold;">Event Guide</a>
-    <a href="#quiz" style="margin: 0 15px; text-decoration: none; color: #8b4513; font-weight: bold;">Knowledge Test</a>
+<nav>
+    <a href="#history">History</a>
+    <a href="#events">Events</a>
+    <a href="#quiz">Quiz</a>
+    <a href="#grammar">Grammar</a>
+    <a href="#multimedia">Watch & Schedule</a>
 </nav>
 
 <main>
-    <div class="comparison-grid" id="history">
-        <section class="card">
-            <h2>🏛️ Ancient Facts (776 BCE)</h2>
-            <p><strong>Origin:</strong> Held in Olympia to honor the god Zeus.</p>
-            <p><strong>Timeline:</strong> Started in 776 BCE; declined around 424 BCE during the Spartan war.</p>
-            <p><strong>Rules:</strong> Women were not allowed to compete or even attend if married.</p>
-            <p><strong>Uniform:</strong> Male athletes competed entirely naked.</p>
-        </section>
+    <section id="history" class="card">
+        <h2>🏛️ Ancient History (PDF Page 1)</h2>
+        <p>The first Olympic Games were held in Greece almost 3,000 years ago in <strong>776 BC</strong>. Athletes gathered in <strong>Olympia</strong> to honor the god Zeus.</p>
+        <ul>
+            <li><strong>Women:</strong> Not allowed to compete or watch if married.</li>
+            <li><strong>Uniform:</strong> Male athletes competed entirely naked.</li>
+            <li><strong>Prizes:</strong> Winners received an <strong>olive branch</strong>.</li>
+        </ul>
+        <p>The modern games began in 1894, with the first modern event held in Athens in 1896.</p>
+    </section>
 
-        <section class="card winter-theme">
-            <h2>❄️ Winter Olympics (2026 CE)</h2>
-            <p><strong>Location:</strong> Milano Cortina, Italy.</p>
-            <p><strong>Events:</strong> Over 100 events including Skiing, Skeleton, and Ice Hockey.</p>
-            <p><strong>The Prize:</strong> Modern medals vs. the Ancient <strong>Olive Branch</strong>.</p>
-        </section>
-    </div>
-
-    <section class="card" id="events">
+    <section id="events" class="card winter-theme">
         <h2>Ancient Event Categories</h2>
-        <p>By 100 BCE, the games lasted for five days. Here is what athletes competed in:</p>
         <table>
-            <thead>
-                <tr>
-                    <th>Category</th>
-                    <th>Traditional Events</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>Sprinting</strong></td>
-                    <td>Stade (200m), Dialous (400m), Dolichos (4800m), Hoplitodromos (running in full armor).</td>
-                </tr>
-                <tr>
-                    <td><strong>Combat</strong></td>
-                    <td>Boxing, Wrestling, and Pankration (violent martial arts).</td>
-                </tr>
-                <tr>
-                    <td><strong>Other</strong></td>
-                    <td>Chariot Racing (the owner won, not the rider!) and the Pentathlon.</td>
-                </tr>
-            </tbody>
+            <tr>
+                <th>Type</th>
+                <th>Traditional Events</th>
+            </tr>
+            <tr>
+                <td><strong>Sprinting</strong></td>
+                <td>Stade (200m), Dialous (400m), Dolichos (4800m)</td>
+            </tr>
+            <tr>
+                <td><strong>Combat</strong></td>
+                <td>Boxing, Wrestling, Pankration</td>
+            </tr>
+            <tr>
+                <td><strong>Other</strong></td>
+                <td>Chariot Racing, Pentathlon</td>
+            </tr>
         </table>
     </section>
 
-    <section class="card" id="quiz" style="text-align: center; border-left: 5px solid #d4af37;">
-        <h2>Test Your Knowledge</h2>
-        <p>What did the winner of an Ancient Olympic event receive?</p>
-        <button onclick="checkAnswer('A')" style="padding: 10px 20px; cursor: pointer;">A) Gold Medal</button>
-        <button onclick="checkAnswer('B')" style="padding: 10px 20px; cursor: pointer;">B) Olive Branch</button>
-        <button onclick="checkAnswer('C')" style="padding: 10px 20px; cursor: pointer;">C) Money</button>
-        <p id="quiz-result" style="margin-top: 15px; font-weight: bold;"></p>
+    <section id="quiz" class="card">
+        <h2>🧠 Page 2: Comprehension Quiz</h2>
+        <p><em>Check what you've learned from the history reading:</em></p>
+        <div>
+            <p><strong>1. When were the first ancient Olympic Games?</strong></p>
+            <button class="btn-primary" onclick="alert('Try again!')">1896</button>
+            <button class="btn-primary" onclick="alert('Correct! 776 BC')">776 BC</button>
+            
+            <p><strong>2. Who was the first country to hold the modern games?</strong></p>
+            <button class="btn-primary" onclick="alert('Correct! Athens, Greece (1896)')">Greece</button>
+            <button class="btn-primary" onclick="alert('Try again!')">France</button>
+        </div>
+    </section>
+
+    <section id="grammar" class="card">
+        <h2>✍️ Page 3: Grammar in Context</h2>
+        <p>Select the correct verb for this sentence: <br>
+        <strong>"The first Winter Olympic Games ____ held in 1924."</strong></p>
+        <button class="btn-gold" onclick="setGrammarResult('Correct! \'Games\' is plural.')">were</button>
+        <button class="btn-gold" onclick="setGrammarResult('Incorrect. \'Games\' is plural, try again.')">was</button>
+        <p id="grammar-feedback" style="margin-top: 15px; font-weight: bold; color: var(--winter-blue);"></p>
+    </section>
+
+    <section class="card">
+        <h2>📝 Page 4: Writing Prompt</h2>
+        <p><strong>Task:</strong> Imagine you are writing to the IOC. Explain why your city should host the next Summer Olympic Games.</p>
+        <textarea style="width:100%; height:120px; border: 1px solid #ccc; padding: 10px;" placeholder="Dear IOC, I believe my city should host the games because..."></textarea>
+    </section>
+
+    <section id="multimedia" class="video-section">
+        <h2>🏅 Great Olympic Moments</h2>
+        <p>Watch these legendary moments of sportsmanship and triumph.</p>
+        <a href="https://www.youtube.com/watch?v=k_mfxRTdrQE" target="_blank" class="yt-button">▶️ Watch Video</a>
+        
+        <div style="margin: 30px 0; border-top: 1px solid #444;"></div>
+        
+        <h2>❄️ Milano Cortina 2026</h2>
+        <p>Plan your viewing for the upcoming Winter Games.</p>
+        <a href="https://www.olympics.com/en/milano-cortina-2026/schedule" target="_blank" class="schedule-button">View Official Schedule</a>
     </section>
 </main>
 
 <footer>
-    <p style="text-align: center; font-size: 0.8rem; color: #666;">Data sourced from History Worksheet - Winter_Olympics_2026_ILC Project</p>
+    <p>Winter_Olympics_2026_ILC Project | Educational Resource for Students</p>
 </footer>
 
 <script>
-    function checkAnswer(choice) {
-        const result = document.getElementById('quiz-result');
-        if (choice === 'B') {
-            result.innerText = "✅ Correct! They received an olive branch as a token of the greatest sporting achievement.";
-            result.style.color = "green";
-        } else {
-            result.innerText = "❌ Not quite. Try again! (Hint: It grows on a tree)";
-            result.style.color = "red";
-        }
+    function setGrammarResult(msg) {
+        document.getElementById('grammar-feedback').innerText = msg;
     }
 </script>
 
