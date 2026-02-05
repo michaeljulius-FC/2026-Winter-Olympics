@@ -98,3 +98,8 @@ textarea {
 .btn-blue { background: var(--winter-blue); color: white; }
 
 footer { text-align: center; padding: 40px; color: #666; }
+.btn-usa { background: #192f5d; color: white; }
+.btn-video { background: var(--yt-red); color: white; }
+.btn-blue { background: var(--winter-blue); color: white; }
+
+footer { text-align: center; padding: 40px; color: #666; }
