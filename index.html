@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Olympics: 776 BCE vs 2026 CE</title>
+    <title>Winter Olympics 2026 ILC | History Project</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,41 +13,83 @@
     <p>From the Temple of Zeus to Milano Cortina 2026</p>
 </header>
 
+<nav style="text-align: center; margin-bottom: 20px;">
+    <a href="#history" style="margin: 0 15px; text-decoration: none; color: #8b4513; font-weight: bold;">Ancient History</a>
+    <a href="#events" style="margin: 0 15px; text-decoration: none; color: #8b4513; font-weight: bold;">Event Guide</a>
+    <a href="#quiz" style="margin: 0 15px; text-decoration: none; color: #8b4513; font-weight: bold;">Knowledge Test</a>
+</nav>
+
 <main>
-    <div class="comparison-grid">
+    <div class="comparison-grid" id="history">
         <section class="card">
             <h2>🏛️ Ancient Facts (776 BCE)</h2>
-            <p><strong>Origin:</strong> Held in Olympia to honor Zeus.</p>
-            <p><strong>Events:</strong> Started with just the <em>Stade</em> (200m race).</p>
-            <p><strong>Rules:</strong> No clothes allowed! Male athletes competed naked.</p>
+            <p><strong>Origin:</strong> Held in Olympia to honor the god Zeus.</p>
+            <p><strong>Timeline:</strong> Started in 776 BCE; declined around 424 BCE during the Spartan war.</p>
+            <p><strong>Rules:</strong> Women were not allowed to compete or even attend if married.</p>
+            <p><strong>Uniform:</strong> Male athletes competed entirely naked.</p>
         </section>
 
         <section class="card winter-theme">
             <h2>❄️ Winter Olympics (2026 CE)</h2>
             <p><strong>Location:</strong> Milano Cortina, Italy.</p>
-            <p><strong>Events:</strong> Over 100 events including Skiing and Skeleton.</p>
-            <p><strong>Rules:</strong> High-tech aerodynamic suits required!</p>
+            <p><strong>Events:</strong> Over 100 events including Skiing, Skeleton, and Ice Hockey.</p>
+            <p><strong>The Prize:</strong> Modern medals vs. the Ancient <strong>Olive Branch</strong>.</p>
         </section>
     </div>
 
-    <section class="card">
+    <section class="card" id="events">
         <h2>Ancient Event Categories</h2>
+        <p>By 100 BCE, the games lasted for five days. Here is what athletes competed in:</p>
         <table>
-            <tr>
-                <th>Category</th>
-                <th>Traditional Events</th>
-            </tr>
-            <tr>
-                <td>Sprinting</td>
-                <td>Stade, Dialous, Dolichos, Hoplitodromos</td>
-            </tr>
-            <tr>
-                <td>Combat</td>
-                <td>Boxing, Wrestling, Pankration</td>
-            </tr>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Traditional Events</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Sprinting</strong></td>
+                    <td>Stade (200m), Dialous (400m), Dolichos (4800m), Hoplitodromos (running in full armor).</td>
+                </tr>
+                <tr>
+                    <td><strong>Combat</strong></td>
+                    <td>Boxing, Wrestling, and Pankration (violent martial arts).</td>
+                </tr>
+                <tr>
+                    <td><strong>Other</strong></td>
+                    <td>Chariot Racing (the owner won, not the rider!) and the Pentathlon.</td>
+                </tr>
+            </tbody>
         </table>
     </section>
+
+    <section class="card" id="quiz" style="text-align: center; border-left: 5px solid #d4af37;">
+        <h2>Test Your Knowledge</h2>
+        <p>What did the winner of an Ancient Olympic event receive?</p>
+        <button onclick="checkAnswer('A')" style="padding: 10px 20px; cursor: pointer;">A) Gold Medal</button>
+        <button onclick="checkAnswer('B')" style="padding: 10px 20px; cursor: pointer;">B) Olive Branch</button>
+        <button onclick="checkAnswer('C')" style="padding: 10px 20px; cursor: pointer;">C) Money</button>
+        <p id="quiz-result" style="margin-top: 15px; font-weight: bold;"></p>
+    </section>
 </main>
+
+<footer>
+    <p style="text-align: center; font-size: 0.8rem; color: #666;">Data sourced from History Worksheet - Winter_Olympics_2026_ILC Project</p>
+</footer>
+
+<script>
+    function checkAnswer(choice) {
+        const result = document.getElementById('quiz-result');
+        if (choice === 'B') {
+            result.innerText = "✅ Correct! They received an olive branch as a token of the greatest sporting achievement.";
+            result.style.color = "green";
+        } else {
+            result.innerText = "❌ Not quite. Try again! (Hint: It grows on a tree)";
+            result.style.color = "red";
+        }
+    }
+</script>
 
 </body>
 </html>
