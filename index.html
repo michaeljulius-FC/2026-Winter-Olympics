@@ -17,44 +17,37 @@
     <a href="#history">Ancient History</a>
     <a href="#sports">Winter Sports</a>
     <a href="#teamusa">Team USA</a>
-    <a href="#quiz">Quiz</a>
+    <a href="#writing">Writing Task</a>
     <a href="#schedule">2026 Schedule</a>
 </nav>
 
 <main>
     <section id="history" class="card">
         <h2>🏛️ Ancient Origins</h2>
-        <p>Did you know the first games lasted only <strong>5 days</strong>? Today, they last <strong>17 days</strong>! In 776 BC, athletes competed in just one event: a 200-meter race called the <strong>Stade</strong>.</p>
-        <p>Winners received a sacred <strong>olive branch</strong>, representing the highest honor in Greece.</p>
+        <p>In 776 BC, there was just one event: the <strong>Stade</strong>[cite: 1]. By 100 BC, the games expanded to five days and included wrestling and chariot racing[cite: 1]. Winners were presented with an <strong>olive branch</strong>[cite: 1].</p>
     </section>
 
     <section id="sports" class="card winter-theme" style="text-align: center;">
-        <h2>❄️ Winter Sports Directory</h2>
-        <p>Explore the high-speed events that define the Winter Games, from the ski slopes to the ice rink.</p>
-        <a href="https://www.youtube.com/watch?v=hEkVE-FdmU4" target="_blank" class="btn btn-video">
-            📽️ Watch: Winter Olympic Sports List
-        </a>
-        <p style="font-size: 0.85rem; margin-top: 10px; font-style: italic;">See the athletes, the equipment, and the speed.</p>
+        <h2>❄️ Winter Sports & Team USA</h2>
+        <a href="https://www.youtube.com/watch?v=hEkVE-FdmU4" target="_blank" class="btn btn-video">📽️ Watch: Winter Sports List</a>
+        <a href="https://www.youtube.com/watch?v=o9NIxidkxXI" target="_blank" class="btn btn-usa">📽️ Watch: Current US Olympians</a>
     </section>
 
-    <section id="teamusa" class="card usa-theme">
-        <h2>🇺🇸 Team USA Spotlight</h2>
-        <p>Discover the athletes currently representing the United States on the world stage.</p>
-        <a href="https://www.youtube.com/watch?v=o9NIxidkxXI" target="_blank" class="btn btn-usa">
-            📽️ Watch: Current US Olympians
-        </a>
-    </section>
-
-    <section id="quiz" class="card">
-        <h2>🧠 Quick Quiz</h2>
-        <p><strong>When were women allowed to compete for the first time?</strong></p>
-        <button class="btn btn-blue" onclick="alert('Try again! Think modern era.')">776 BC</button>
-        <button class="btn btn-blue" onclick="alert('Correct! Paris, 1900')">1900</button>
+    <section id="writing" class="card">
+        <h2>📝 Writing Practice: Host City Proposal</h2>
+        <p><strong>Task:</strong> Imagine you are writing to the International Olympic Committee. Explain why your city should host the next Summer Olympic Games.</p>
+        
+        <form id="olympicForm">
+            <input type="text" id="studentName" placeholder="Your Full Name" style="width:100%; padding:10px; margin-bottom:10px; border:1px solid #ddd; border-radius:5px;" required>
+            <textarea id="proposalText" placeholder="Dear IOC, I believe my city should host the games because..." required></textarea>
+            <button type="button" class="btn btn-submit" onclick="submitWork()">Submit to Teacher</button>
+        </form>
+        <p id="submission-status" style="display:none; margin-top:15px; font-weight:bold; color: green;">✔ Your proposal has been prepared for sending!</p>
     </section>
 
     <section id="schedule" class="card" style="background: #111; color: white; text-align: center;">
-        <h2 style="color: var(--ancient-gold);">🏅 Final Resources</h2>
-        <a href="https://www.youtube.com/watch?v=k_mfxRTdrQE" target="_blank" class="btn btn-video">▶️ Iconic Moments Video</a>
+        <h2 style="color: var(--ancient-gold);">🏅 Official Resources</h2>
+        <a href="https://www.youtube.com/watch?v=k_mfxRTdrQE" target="_blank" class="btn btn-video">▶️ Iconic Moments</a>
         <a href="https://www.olympics.com/en/milano-cortina-2026/schedule" target="_blank" class="btn btn-blue">📅 2026 Schedule</a>
     </section>
 </main>
@@ -62,6 +55,26 @@
 <footer>
     <p>Winter_Olympics_2026_ILC | Educational Student Portal</p>
 </footer>
+
+<script>
+    function submitWork() {
+        const name = document.getElementById('studentName').value;
+        const text = document.getElementById('proposalText').value;
+        const teacherEmail = "your-email@example.com"; // <-- CHANGE THIS TO YOUR EMAIL
+
+        if(name && text) {
+            const subject = encodeURIComponent("Olympic Writing Proposal: " + name);
+            const body = encodeURIComponent("Student Name: " + name + "\n\nProposal:\n" + text);
+            
+            // This opens the student's email app with the content pre-filled
+            window.location.href = `mailto:${teacherEmail}?subject=${subject}&body=${body}`;
+            
+            document.getElementById('submission-status').style.display = 'block';
+        } else {
+            alert("Please fill out both your name and the proposal text.");
+        }
+    }
+</script>
 
 </body>
 </html>
