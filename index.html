@@ -9,9 +9,11 @@
             text-align: center;
             padding: 20px;
         }
-        .btn-red { background-color: #e53935; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; margin: 5px; }
-        .btn-blue { background-color: #005696; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; margin: 5px; }
-        .btn-gold { background-color: #d4af37; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; margin-top: 15px; }
+        /* Button Styles based on your images */
+        .btn-red { background-color: #e53935; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; margin: 5px; text-decoration: none; display: inline-block; }
+        .btn-blue { background-color: #005696; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; margin: 5px; text-decoration: none; display: inline-block; }
+        .btn-gold { background-color: #d4af37; color: white; border: none; padding: 12px 24px; border-radius: 5px; cursor: pointer; margin-top: 15px; text-decoration: none; display: inline-block; font-weight: bold; }
+        
         .btn-submit {
             display: block;
             width: 100%;
@@ -24,6 +26,15 @@
             border-radius: 12px;
             font-size: 1.2rem;
             margin-top: 20px;
+        }
+        
+        .btn-choice {
+            padding: 10px 20px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: white;
         }
     </style>
 </head>
@@ -58,7 +69,7 @@
             </div>
         </div>
         <div style="text-align: center; border-top: 1px dashed #ccc; margin-top: 20px;">
-            <button class="btn-gold">🎬 Watch Olympic History Video</button>
+            <a href="https://www.youtube.com/watch?v=VdHHus8IgYA" target="_blank" class="btn-gold">🎬 Watch Olympic History Video</a>
         </div>
     </div>
 
@@ -86,11 +97,6 @@
     <section id="bobsled" class="card">
         <h2>🛷 USA Bobsled</h2>
         <img src="https://s7d2.scene7.com/is/image/TWCNews/AP25068671472541?wid=1250&hei=703&$wide-bg$" alt="USA Men's Bobsled" style="width:100%; border-radius:10px;">
-    </section>
-
-    <section id="curling" class="card">
-        <h2>🥌 USA Curling</h2>
-        <img src="https://images.squarespace-cdn.com/content/v1/5f34a2ea0d87a44cac1ebfb0/a61537a0-8a47-485d-96f9-2e35b5d3d3bc/Screenshot+2021-11-22+182409.png" alt="USA Curling" style="width:100%; border-radius:10px;">
     </section>
 
     <section id="writing" class="card">
