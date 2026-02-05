@@ -16,9 +16,9 @@
 <nav>
     <a href="#history">History</a>
     <a href="#athletes">Individual Stars</a>
-    <a href="#hockey">Hockey</a>
     <a href="#bobsled">Bobsled</a>
     <a href="#curling">Curling</a>
+    <a href="#writing-prompt">Host Proposal</a>
     <a href="#quiz">Quiz</a>
 </nav>
 
@@ -65,11 +65,11 @@
     <section id="bobsled">
         <div class="card hover-zoom">
             <h2 style="color: var(--usa-red);">🛷 USA Women's Bobsled</h2>
-            <img src="https://people.com/thmb/f9wid7LkEYhB4yc8-kUiDS5wDWE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(999x0:1001x2)/women-bobsled-team-2-e778cabfcfb44b71886a550925f16030.jpg" alt="USA Women's Bobsled">
+            <img src="https://people.com/thmb/f9wid7LkEYhB4yc8-kUiDS5wDWE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(999x0:1001x2)/women-bobsled-team-2-e778cabfcfb44b71886a550925f16030.jpg" alt="USA Women's Bobsled" style="width:100%; border-radius:10px;">
         </div>
         <div class="card hover-zoom">
             <h2 style="color: var(--deep-ice);">🛷 USA Men's Bobsled</h2>
-            <img src="https://s7d2.scene7.com/is/image/TWCNews/AP25068671472541?wid=1250&hei=703&$wide-bg$" alt="USA Men's Bobsled">
+            <img src="https://s7d2.scene7.com/is/image/TWCNews/AP25068671472541?wid=1250&hei=703&$wide-bg$" alt="USA Men's Bobsled" style="width:100%; border-radius:10px;">
         </div>
     </section>
 
@@ -83,6 +83,26 @@
         </p>
     </section>
 
+    <section id="writing-prompt" class="card">
+        <h2 style="color: var(--usa-red);">📝 Olympic Host Proposal</h2>
+        <p><strong>Writing Prompt:</strong> Imagine you are the Mayor of your city. Write a persuasive letter to the IOC explaining why your city should host the next Olympic Games.</p>
+        
+        <div style="background: #f9f9f9; padding: 15px; border-radius: 8px; border: 1px solid #ddd; margin-bottom: 20px;">
+            <p><strong>Your Proposal Must Include:</strong></p>
+            <ul style="text-align: left; display: inline-block;">
+                <li>Identify the city name and specific venues.</li>
+                <li>List 3 local attractions for visiting tourists.</li>
+                <li>A plan for environmental sustainability.</li>
+                <li>Explanation of how the Games will benefit the local community.</li>
+            </ul>
+        </div>
+
+        <textarea id="userProposal" placeholder="Dear IOC, I believe my city should host the Games because..." style="width: 100%; height: 200px; padding: 15px; border-radius: 10px; border: 2px solid var(--deep-ice); font-family: sans-serif; resize: vertical;"></textarea>
+        
+        <button class="btn-choice" style="margin-top: 15px;" onclick="submitProposal()">Submit Proposal</button>
+        <div id="feedback" style="margin-top: 10px; font-weight: bold; color: green;"></div>
+    </section>
+
     <section id="quiz" class="card" style="text-align: center;">
         <h2>🧠 Knowledge Test</h2>
         <p><strong>What did winners of the Ancient Games receive?</strong></p>
@@ -92,6 +112,7 @@
 </main>
 
 <script>
+    // Countdown Timer Logic
     const countdownDate = new Date("Feb 6, 2026 00:00:00").getTime();
     setInterval(function() {
         const now = new Date().getTime();
@@ -100,6 +121,21 @@
         const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         document.getElementById("countdown").innerHTML = "❄️ " + days + "d " + hours + "h until Milano Cortina 2026!";
     }, 1000);
+
+    // Writing Prompt Submission Logic
+    function submitProposal() {
+        const text = document.getElementById("userProposal").value;
+        const feedback = document.getElementById("feedback");
+        
+        if(text.length < 50) {
+            feedback.style.color = "red";
+            feedback.innerHTML = "❌ Your proposal is too short! Please provide more detail.";
+        } else {
+            feedback.style.color = "green";
+            feedback.innerHTML = "✅ Thank you! Your proposal has been submitted for review.";
+            // Here you could send the 'text' to a server or local storage
+        }
+    }
 </script>
 
 </body>
