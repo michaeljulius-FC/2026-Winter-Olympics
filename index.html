@@ -2,15 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Olympic Portal | Team USA & History</title>
+    <title>Olympics: Ancient & Modern</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
     <h1>The Olympic Journey</h1>
-    <p>From Ancient Greece to Milano Cortina 2026</p>
+    <p>Honoring the Past, Inspiring the Future</p>
 </header>
 
 <nav>
@@ -18,68 +17,64 @@
     <a href="#athletes">Team USA</a>
     <a href="#media">Videos</a>
     <a href="#quiz">Quiz</a>
-    <a href="#writing">Submit Task</a>
 </nav>
 
 <main>
-    <section id="history" class="card">
-        <h2>🏛️ Ancient vs. Modern</h2>
-        <p>The first games in <strong>776 BC</strong> lasted only one day. Today, the games last <strong>17 days</strong> with over 300 events. While ancient winners received an <strong>olive branch</strong>, modern athletes compete for gold, silver, and bronze medals.</p>
-    </section>
+    <div class="comparison-grid" id="history">
+        <section class="card">
+            <h2>🏛️ Ancient Games</h2>
+            <p><strong>Began:</strong> 776 BC in Olympia[cite: 166, 167].</p>
+            <p><strong>Duration:</strong> Between 1 and 5 days[cite: 168].</p>
+            <p><strong>Participants:</strong> Only men were allowed to compete[cite: 168].</p>
+        </section>
 
-    <section id="athletes" class="card" style="border-left-color: var(--usa-red);">
-        <h2>🇺🇸 Team USA Athlete Spotlight</h2>
+        <section class="card winter-theme">
+            <h2>❄️ Modern Games</h2>
+            <p><strong>Began:</strong> 1896 in Athens, Greece[cite: 170].</p>
+            <p><strong>Duration:</strong> Now lasts for 17 days[cite: 175].</p>
+            <p><strong>Participants:</strong> Women began competing in 1900[cite: 172].</p>
+        </section>
+    </div>
+
+    <section id="athletes" class="card usa-theme">
+        <h2>🇺🇸 Team USA Spotlight</h2>
         <div class="athlete-grid">
             <div class="athlete-card">
                 <img src="https://via.placeholder.com/300x200?text=Ilian+Malinin" alt="Ilian Malinin">
                 <h3>Ilian Malinin</h3>
-                <p><strong>Sport:</strong> Figure Skating</p>
-                <p><em>The "God of the Quad"—the first person to ever land a quadruple Axel in competition.</em></p>
+                <p><strong>Figure Skating:</strong> The first skater to land a quadruple Axel in competition.</p>
             </div>
             <div class="athlete-card">
                 <img src="https://via.placeholder.com/300x200?text=Chloe+Kim" alt="Chloe Kim">
                 <h3>Chloe Kim</h3>
-                <p><strong>Sport:</strong> Snowboarding</p>
-                <p><em>Two-time gold medalist and the youngest woman to win an Olympic snowboarding medal.</em></p>
-            </div>
-            <div class="athlete-card">
-                <img src="https://via.placeholder.com/300x200?text=Mikaela+Shiffrin" alt="Mikaela Shiffrin">
-                <h3>Mikaela Shiffrin</h3>
-                <p><strong>Sport:</strong> Alpine Skiing</p>
-                <p><em>The winningest alpine skier in history, with more World Cup victories than anyone else.</em></p>
+                <p><strong>Snowboarding:</strong> Youngest woman to win an Olympic snowboarding gold medal.</p>
             </div>
         </div>
     </section>
 
     <section id="media" class="card winter-theme" style="text-align: center;">
-        <h2>📽️ Learning Resources</h2>
-        <a href="https://www.youtube.com/watch?v=hEkVE-FdmU4" target="_blank" class="btn-video">Winter Sports List</a>
-        <a href="https://www.youtube.com/watch?v=o9NIxidkxXI" target="_blank" class="btn-video" style="background: #192f5d;">Meet Team USA</a>
+        <h2>📽️ Olympic Video Center</h2>
+        <a href="https://www.youtube.com/watch?v=hEkVE-FdmU4" target="_blank" class="btn-video">📽️ Olympic Sports List</a>
+        <a href="https://www.youtube.com/watch?v=o9NIxidkxXI" target="_blank" class="btn-video" style="background: #192f5d;">🇺🇸 Meet Team USA</a>
     </section>
 
     <section id="quiz" class="card" style="text-align: center;">
         <h2>🧠 Knowledge Test</h2>
-        <p><strong>What did the winner of an Ancient Olympic event receive?</strong></p>
-        <button class="btn-choice" onclick="alert('Try again!')">A) Gold Medal</button>
-        <button class="btn-choice" onclick="alert('Correct! The Olive Branch was the top prize.')">B) Olive Branch</button>
-        <button class="btn-choice" onclick="alert('Try again!')">C) Money</button>
+        <p><strong>Where were the first modern Olympic Games held?</strong></p>
+        <button class="btn-choice" onclick="alert('Olympia was for the Ancient games! Try again.')">A) Olympia</button>
+        <button class="btn-choice" onclick="alert('Correct! Athens hosted the first modern games in 1896.')">B) Athens</button>
+        <button class="btn-choice" onclick="alert('Not quite! Paris was the second host city.')">C) Paris</button>
     </section>
 
     <section id="writing" class="card">
-        <h2>📝 Page 4 Writing Task</h2>
-        <p>Complete your "Host City Proposal" by clicking the button below. Your response will be saved directly to the class spreadsheet via Google Forms.</p>
-        
+        <h2>📝 Host City Proposal</h2>
+        <p>Explain why your city should host the next Summer Olympic Games. Click below to submit your work to the class spreadsheet.</p>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSf-NEexvOJTII6fpaNzrQYIUK1ekcORdy_wEF6_bbgfRm4u2Q/viewform?usp=publish-editor" 
-           target="_blank" 
-           class="btn-submit">
-           Click Here to Submit to Spreadsheet
+           target="_blank" class="btn-submit">
+            Open Submission Form & Spreadsheet
         </a>
     </section>
 </main>
-
-<footer>
-    <p>© 2026 Winter Olympics ILC Project | Data sourced from History Lesson PDF</p>
-</footer>
 
 </body>
 </html>
