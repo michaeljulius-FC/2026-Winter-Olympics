@@ -5,7 +5,13 @@
     <title>Olympic Winter Games | Team USA Hub</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Ensuring the form button stands out */
+        .video-center {
+            text-align: center;
+            padding: 20px;
+        }
+        .btn-red { background-color: #e53935; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; margin: 5px; }
+        .btn-blue { background-color: #005696; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; margin: 5px; }
+        .btn-gold { background-color: #d4af37; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; margin-top: 15px; }
         .btn-submit {
             display: block;
             width: 100%;
@@ -18,10 +24,6 @@
             border-radius: 12px;
             font-size: 1.2rem;
             margin-top: 20px;
-            transition: opacity 0.3s;
-        }
-        .btn-submit:hover {
-            opacity: 0.9;
         }
     </style>
 </head>
@@ -29,7 +31,6 @@
 
 <header>
     <h1>The Olympic Journey</h1>
-    <p>Honoring the Tradition of Excellence</p>
     <div id="countdown">Loading Countdown...</div>
 </header>
 
@@ -45,89 +46,69 @@
 <main>
     <div class="card" id="history">
         <div style="display: flex; gap: 20px; flex-wrap: wrap;">
-            <div style="flex: 1; border-left: 5px solid var(--gold); padding-left: 15px;">
+            <div style="flex: 1; border-left: 5px solid #d4af37; padding-left: 15px;">
                 <h2>🏛️ Ancient History</h2>
                 <p><strong>Founded:</strong> 776 BC in Greece.</p>
                 <p><strong>Rules:</strong> Only men could compete; winners received an olive branch.</p>
             </div>
-            <div style="flex: 1; border-left: 5px solid var(--deep-ice); padding-left: 15px;">
+            <div style="flex: 1; border-left: 5px solid #005696; padding-left: 15px;">
                 <h2>❄️ Modern Winter</h2>
                 <p><strong>Founded:</strong> 1924.</p>
                 <p><strong>Rules:</strong> Over 200 countries and women's competitions included.</p>
             </div>
         </div>
-        <div style="text-align: center; margin-top: 20px; border-top: 1px dashed #ccc; padding-top: 20px;">
-            <a href="https://www.youtube.com/watch?v=VdHHus8IgYA" target="_blank" class="btn-history-video">🎬 Watch Olympic History Video</a>
+        <div style="text-align: center; border-top: 1px dashed #ccc; margin-top: 20px;">
+            <button class="btn-gold">🎬 Watch Olympic History Video</button>
         </div>
     </div>
 
     <section id="quiz" class="card" style="text-align: center;">
-        <h2 style="color: var(--deep-ice);">🧠 Knowledge Test</h2>
+        <h2 style="color: #005696;">🧠 Knowledge Test</h2>
         <p><strong>What did winners of the Ancient Games receive?</strong></p>
-        <button class="btn-choice" style="padding: 10px 20px; margin: 5px;" onclick="alert('Not quite!')">Gold Medals</button>
-        <button class="btn-choice" style="padding: 10px 20px; margin: 5px;" onclick="alert('Correct! They were crowned with an olive branch.')">Olive Branch</button>
+        <button class="btn-choice" onclick="alert('Not quite!')">Gold Medals</button>
+        <button class="btn-choice" onclick="alert('Correct!')">Olive Branch</button>
+    </section>
+
+    <section class="card video-center">
+        <h2>📽️ Olympic Video Center</h2>
+        <button class="btn-red">🎥 Olympic Sports List</button>
+        <button class="btn-blue">us Meet Team USA</button>
     </section>
 
     <section id="athletes" class="card">
-        <h2 style="color: var(--usa-red);">⭐ Individual Stars</h2>
+        <h2 style="color: #e53935;">⭐ Individual Stars</h2>
         <div class="athlete-grid">
-            <div class="athlete-card">
-                <img src="https://res.cloudinary.com/usopc-prod/image/upload/v1686058539/TeamUSA%20Assets/Migration/Malinin_Ilia_032523_1440x810_Updated.jpg" alt="Ilia Malinin">
-                <h3>Ilia Malinin</h3>
-                <p>Figure Skating</p>
-            </div>
-            <div class="athlete-card">
-                <img src="https://gray-kolo-prod.gtv-cdn.com/resizer/v2/6V4SYIRRHBC5XHJMHAFQVIQ36Q.jpg?auth=feea57404a6a2779244653442ee99d7cd9ce93a96e8081b602d9c028d9b065e7&width=1600&height=900&smart=true" alt="Chloe Kim">
-                <h3>Chloe Kim</h3>
-                <p>Snowboarding</p>
-            </div>
-            <div class="athlete-card">
-                <img src="https://s.yimg.com/ny/api/res/1.2/aQLfR2hcrg2W2Kv5cQTA9g--/YXBwaWQ9aGlnaGxhbmRlcjt3PTI0MDA7aD0zNjAwO2NmPXdlYnA-/https://media.zenfs.com/en/list_wire_usa_today_articles_325/e356dffeb931232e34792d8c379f5f29" alt="Erin Jackson">
-                <h3>Erin Jackson</h3>
-                <p>Speed Skating</p>
-            </div>
+            <div class="athlete-card"><img src="https://res.cloudinary.com/usopc-prod/image/upload/v1686058539/TeamUSA%20Assets/Migration/Malinin_Ilia_032523_1440x810_Updated.jpg" alt="Ilia Malinin"><h3>Ilia Malinin</h3></div>
+            <div class="athlete-card"><img src="https://gray-kolo-prod.gtv-cdn.com/resizer/v2/6V4SYIRRHBC5XHJMHAFQVIQ36Q.jpg?auth=feea57404a6a2779244653442ee99d7cd9ce93a96e8081b602d9c028d9b065e7&width=1600&height=900&smart=true" alt="Chloe Kim"><h3>Chloe Kim</h3></div>
         </div>
     </section>
 
-    <section id="bobsled">
-        <div class="card">
-            <h2 style="color: var(--usa-red);">🛷 USA Women's Bobsled</h2>
-            <img src="https://people.com/thmb/f9wid7LkEYhB4yc8-kUiDS5wDWE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(999x0:1001x2)/women-bobsled-team-2-e778cabfcfb44b71886a550925f16030.jpg" alt="USA Women's Bobsled" style="width:100%; border-radius:10px;">
-        </div>
-        <div class="card">
-            <h2 style="color: var(--deep-ice);">🛷 USA Men's Bobsled</h2>
-            <img src="https://s7d2.scene7.com/is/image/TWCNews/AP25068671472541?wid=1250&hei=703&$wide-bg$" alt="USA Men's Bobsled" style="width:100%; border-radius:10px;">
-        </div>
+    <section id="bobsled" class="card">
+        <h2>🛷 USA Bobsled</h2>
+        <img src="https://s7d2.scene7.com/is/image/TWCNews/AP25068671472541?wid=1250&hei=703&$wide-bg$" alt="USA Men's Bobsled" style="width:100%; border-radius:10px;">
     </section>
 
     <section id="curling" class="card">
-        <h2 style="color: var(--deep-ice);">🥌 USA Curling</h2>
-        <img src="https://images.squarespace-cdn.com/content/v1/5f34a2ea0d87a44cac1ebfb0/a61537a0-8a47-485d-96f9-2e35b5d3d3bc/Screenshot+2021-11-22+182409.png" alt="USA Curling Team" style="width:100%; border-radius:10px;">
-        <p style="text-align: center; font-weight: bold; margin-top: 15px;">
-            Precision, strategy, and teamwork on the ice.
-        </p>
+        <h2>🥌 USA Curling</h2>
+        <img src="https://images.squarespace-cdn.com/content/v1/5f34a2ea0d87a44cac1ebfb0/a61537a0-8a47-485d-96f9-2e35b5d3d3bc/Screenshot+2021-11-22+182409.png" alt="USA Curling" style="width:100%; border-radius:10px;">
     </section>
 
     <section id="writing" class="card">
-        <h2 style="color: var(--usa-red);">📝 Host City Proposal</h2>
-        <p>Now it's your turn! Based on what you've learned about the tradition and logistics of the Games, submit your proposal for the next host city.</p>
-        <p><strong>Assignment:</strong> Explain why your chosen city is prepared for the Olympics, highlighting attractions and sustainability.</p>
-        
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf-NEexvOJTII6fpaNzrQYIUK1ekcORdy_wEF6_bbgfRm4u2Q/viewform?usp=publish-editor" target="_blank" class="btn-submit">
+        <h2 style="color: #e53935;">📝 Host City Proposal</h2>
+        <p>Submit your persuasive letter to the IOC regarding the next host city.</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf-NEexvOJTII6fpaNzrQYIUK1ekcORdy_wEF6_bbgfRm4u2Q/viewform" target="_blank" class="btn-submit">
             CLICK HERE TO SUBMIT YOUR WRITTEN PROPOSAL
         </a>
     </section>
 </main>
 
 <script>
-    // Countdown Timer
     const countdownDate = new Date("Feb 6, 2026 00:00:00").getTime();
     setInterval(function() {
         const now = new Date().getTime();
         const distance = countdownDate - now;
         const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        document.getElementById("countdown").innerHTML = "❄️ " + days + "d " + hours + "h until Milano Cortina 2026!";
+        document.getElementById("countdown").innerHTML = "❄️ " + days + " days until Milano Cortina 2026!";
     }, 1000);
 </script>
 
