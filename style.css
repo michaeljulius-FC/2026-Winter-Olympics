@@ -136,8 +136,3 @@ main {
 .btn-submit:hover { background: #014175; }
 
 @media (max-width: 600px) { .comparison-grid { grid-template-columns: 1fr; } }
-
-.btn-submit {
-    display: block; width: 100%; padding: 15px; background: var(--deep-navy);
-    color: white; text-align: center; text-decoration: none; 
-    font-weight: bold; border-radius: 8px; margin-top: 15px
