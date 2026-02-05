@@ -83,8 +83,45 @@
     <section class="card video-center">
         <h2>📽️ Olympic Video Center</h2>
         <a href="https://www.youtube.com/watch?v=hEkVE-FdmU4" target="_blank" class="btn-red">🎥 Olympic Sports List</a>
-        <button class="btn-blue">Meet Team USA</button>
+        <a href="https://www.youtube.com/watch?v=o9NIxidkxXI" target="_blank" class="btn-blue">🇺🇸 Meet Team USA</a>
     </section>
 
     <section id="athletes" class="card">
-        <h2 style="color: #e53935
+        <h2 style="color: #e53935;">⭐ Individual Stars</h2>
+        <div class="athlete-grid">
+            <div class="athlete-card"><img src="https://res.cloudinary.com/usopc-prod/image/upload/v1686058539/TeamUSA%20Assets/Migration/Malinin_Ilia_032523_1440x810_Updated.jpg" alt="Ilia Malinin"><h3>Ilia Malinin</h3></div>
+            <div class="athlete-card"><img src="https://gray-kolo-prod.gtv-cdn.com/resizer/v2/6V4SYIRRHBC5XHJMHAFQVIQ36Q.jpg?auth=feea57404a6a2779244653442ee99d7cd9ce93a96e8081b602d9c028d9b065e7&width=1600&height=900&smart=true" alt="Chloe Kim"><h3>Chloe Kim</h3></div>
+        </div>
+    </section>
+
+    <section id="bobsled" class="card">
+        <h2>🛷 USA Bobsled</h2>
+        <img src="https://s7d2.scene7.com/is/image/TWCNews/AP25068671472541?wid=1250&hei=703&$wide-bg$" alt="USA Men's Bobsled" style="width:100%; border-radius:10px;">
+    </section>
+
+    <section id="curling" class="card">
+        <h2>🥌 USA Curling</h2>
+        <img src="https://images.squarespace-cdn.com/content/v1/5f34a2ea0d87a44cac1ebfb0/a61537a0-8a47-485d-96f9-2e35b5d3d3bc/Screenshot+2021-11-22+182409.png" alt="USA Curling" style="width:100%; border-radius:10px;">
+    </section>
+
+    <section id="writing" class="card">
+        <h2 style="color: #e53935;">📝 Host City Proposal</h2>
+        <p>Submit your persuasive letter to the IOC regarding the next host city.</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf-NEexvOJTII6fpaNzrQYIUK1ekcORdy_wEF6_bbgfRm4u2Q/viewform" target="_blank" class="btn-submit">
+            CLICK HERE TO SUBMIT YOUR WRITTEN PROPOSAL
+        </a>
+    </section>
+</main>
+
+<script>
+    const countdownDate = new Date("Feb 6, 2026 00:00:00").getTime();
+    setInterval(function() {
+        const now = new Date().getTime();
+        const distance = countdownDate - now;
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        document.getElementById("countdown").innerHTML = "❄️ " + days + " days until Milano Cortina 2026!";
+    }, 1000);
+</script>
+
+</body>
+</html>
