@@ -36,6 +36,26 @@
             cursor: pointer;
             background-color: white;
         }
+
+        .hockey-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .hockey-item {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+
+        .hockey-item img {
+            width: 100%;
+            border-radius: 10px;
+            height: auto;
+            object-fit: cover;
+        }
     </style>
 </head>
 <body>
@@ -106,9 +126,15 @@
     <div id="teams">
         <section class="card">
             <h2 style="color: #005696;">🏒 USA Hockey</h2>
-            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-                <img src="https://thehockeynews.com/.image/t_share/MTg3MzcyNjU2Mjg4MzY4MDk3/us-mens-olympic-team.jpg" alt="USA Men's Hockey" style="flex: 1; min-width: 300px; border-radius: 10px;">
-                <img src="https://clutchpoints.com/_next/image?url=https%3A%2F%2Fwp.clutchpoints.com%2Fwp-content/uploads/2022/02/Team-USA-womens-hockey-Olympics.jpg&w=3840&q=75" alt="USA Women's Hockey" style="flex: 1; min-width: 300px; border-radius: 10px;">
+            <div class="hockey-container">
+                <div class="hockey-item">
+                    <img src="https://i.guim.co.uk/img/media/ab321d8bfb892d4c20c3d3645f649721e77187c0/0_0_6000_4000/master/6000.jpg?width=620&dpr=1&s=none&crop=none" alt="USA Men's Hockey">
+                    <p><strong>Team USA Men's Hockey</strong></p>
+                </div>
+                <div class="hockey-item">
+                    <img src="https://res.cloudinary.com/usopc-prod/image/upload/v1684899376/TeamUSA%20Assets/Migration/womenshockey_021722_Carousel_1440x810_Updated.jpg" alt="USA Women's Hockey">
+                    <p><strong>Team USA Women's Hockey</strong></p>
+                </div>
             </div>
         </section>
 
