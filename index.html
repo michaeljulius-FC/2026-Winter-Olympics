@@ -2,110 +2,87 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Olympics Portal: Ancient to 2026</title>
+    <title>Olympic Winter Games | ILC Project</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
     <h1>The Olympic Journey</h1>
-    <p>Established 776 BC • Moving Toward Milano Cortina 2026</p>
+    <p>Honoring the Tradition of Excellence</p>
 </header>
 
 <nav>
     <a href="#history">History</a>
-    <a href="#events">Events</a>
+    <a href="#athletes">Team USA</a>
+    <a href="#media">Videos</a>
     <a href="#quiz">Quiz</a>
-    <a href="#grammar">Grammar</a>
-    <a href="#multimedia">Watch & Schedule</a>
+    <a href="#writing">Submit Proposal</a>
 </nav>
 
 <main>
-    <section id="history" class="card">
-        <h2>🏛️ Ancient History (PDF Page 1)</h2>
-        <p>The first Olympic Games were held in Greece almost 3,000 years ago in <strong>776 BC</strong>. Athletes gathered in <strong>Olympia</strong> to honor the god Zeus.</p>
-        <ul>
-            <li><strong>Women:</strong> Not allowed to compete or watch if married.</li>
-            <li><strong>Uniform:</strong> Male athletes competed entirely naked.</li>
-            <li><strong>Prizes:</strong> Winners received an <strong>olive branch</strong>.</li>
-        </ul>
-        <p>The modern games began in 1894, with the first modern event held in Athens in 1896.</p>
-    </section>
+    <div class="comparison-grid" id="history">
+        <section class="card ancient-box">
+            <h2>🏛️ Ancient History</h2>
+            <p><strong>Founded:</strong> 776 BC in Greece.</p>
+            <p><strong>Timeline:</strong> Lasted between 1-5 days.</p>
+            <p><strong>Rules:</strong> Only men could compete; winners received an olive branch.</p>
+        </section>
 
-    <section id="events" class="card winter-theme">
-        <h2>Ancient Event Categories</h2>
-        <table>
-            <tr>
-                <th>Type</th>
-                <th>Traditional Events</th>
-            </tr>
-            <tr>
-                <td><strong>Sprinting</strong></td>
-                <td>Stade (200m), Dialous (400m), Dolichos (4800m)</td>
-            </tr>
-            <tr>
-                <td><strong>Combat</strong></td>
-                <td>Boxing, Wrestling, Pankration</td>
-            </tr>
-            <tr>
-                <td><strong>Other</strong></td>
-                <td>Chariot Racing, Pentathlon</td>
-            </tr>
-        </table>
-    </section>
+        <section class="card modern-box">
+            <h2>❄️ Modern Winter</h2>
+            <p><strong>Founded:</strong> Winter Games began in 1924.</p>
+            <p><strong>Timeline:</strong> Now lasts 17 days.</p>
+            <p><strong>Rules:</strong> Over 200 countries and 300+ events including Women's competitions.</p>
+        </section>
+    </div>
 
-    <section id="quiz" class="card">
-        <h2>🧠 Page 2: Comprehension Quiz</h2>
-        <p><em>Check what you've learned from the history reading:</em></p>
-        <div>
-            <p><strong>1. When were the first ancient Olympic Games?</strong></p>
-            <button class="btn-primary" onclick="alert('Try again!')">1896</button>
-            <button class="btn-primary" onclick="alert('Correct! 776 BC')">776 BC</button>
-            
-            <p><strong>2. Who was the first country to hold the modern games?</strong></p>
-            <button class="btn-primary" onclick="alert('Correct! Athens, Greece (1896)')">Greece</button>
-            <button class="btn-primary" onclick="alert('Try again!')">France</button>
+    <section id="athletes" class="card">
+        <h2 style="color: var(--usa-red);">🇺🇸 Team USA Athletes</h2>
+        <div class="athlete-grid">
+            <div class="athlete-card">
+                <img src="https://via.placeholder.com/300x200/b3e5fc/01579b?text=Ilian+Malinin" alt="Ilian Malinin">
+                <h3>Ilian Malinin</h3>
+                <p><strong>Figure Skating:</strong> Known as the "God of the Quad," he is the first skater to land a quadruple Axel in competition.</p>
+            </div>
+            <div class="athlete-card">
+                <img src="https://via.placeholder.com/300x200/b3e5fc/01579b?text=Chloe+Kim" alt="Chloe Kim">
+                <h3>Chloe Kim</h3>
+                <p><strong>Snowboarding:</strong> A legend in the Halfpipe, she became the youngest woman to win an Olympic snowboarding gold medal.</p>
+            </div>
         </div>
     </section>
 
-    <section id="grammar" class="card">
-        <h2>✍️ Page 3: Grammar in Context</h2>
-        <p>Select the correct verb for this sentence: <br>
-        <strong>"The first Winter Olympic Games ____ held in 1924."</strong></p>
-        <button class="btn-gold" onclick="setGrammarResult('Correct! \'Games\' is plural.')">were</button>
-        <button class="btn-gold" onclick="setGrammarResult('Incorrect. \'Games\' is plural, try again.')">was</button>
-        <p id="grammar-feedback" style="margin-top: 15px; font-weight: bold; color: var(--winter-blue);"></p>
+    <section id="media" class="card" style="text-align: center;">
+        <h2>📽️ Learning Resources</h2>
+        <a href="https://www.youtube.com/watch?v=hEkVE-FdmU4" target="_blank" class="btn-video">📽️ Olympic Sports List</a>
+        <a href="https://www.youtube.com/watch?v=o9NIxidkxXI" target="_blank" class="btn-video" style="background: var(--deep-ice);">🇺🇸 Meet Team USA</a>
     </section>
 
-    <section class="card">
-        <h2>📝 Page 4: Writing Prompt</h2>
-        <p><strong>Task:</strong> Imagine you are writing to the IOC. Explain why your city should host the next Summer Olympic Games.</p>
-        <textarea style="width:100%; height:120px; border: 1px solid #ccc; padding: 10px;" placeholder="Dear IOC, I believe my city should host the games because..."></textarea>
+    <section id="quiz" class="card" style="text-align: center;">
+        <h2>🧠 Knowledge Test</h2>
+        <p><strong>What did winners of the Ancient Games receive?</strong></p>
+        <button class="btn-choice" onclick="alert('Not quite!')">Gold Medals</button>
+        <button class="btn-choice" onclick="alert('Correct! They received an olive branch.')">Olive Branch</button>
+        <button class="btn-choice" onclick="alert('Not quite!')">Olympic Rings</button>
     </section>
 
-    <section id="multimedia" class="video-section">
-        <h2>🏅 Great Olympic Moments</h2>
-        <p>Watch these legendary moments of sportsmanship and triumph.</p>
-        <a href="https://www.youtube.com/watch?v=k_mfxRTdrQE" target="_blank" class="yt-button">▶️ Watch Video</a>
-        
-        <div style="margin: 30px 0; border-top: 1px solid #444;"></div>
-        
-        <h2>❄️ Milano Cortina 2026</h2>
-        <p>Plan your viewing for the upcoming Winter Games.</p>
-        <a href="https://www.olympics.com/en/milano-cortina-2026/schedule" target="_blank" class="schedule-button">View Official Schedule</a>
+    <section id="writing" class="card">
+        <h2>📝 Host City Proposal</h2>
+        <p style="background: #f1f8ff; padding: 15px; border-radius: 10px; font-style: italic;">
+            "Imagine you are writing to the International Olympic Committee. Write a letter and explain why your city should host the next Summer Olympic Games. What Games (Summer or Winter) year would you like to host the games? What are some of the local attractions?"
+        </p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf-NEexvOJTII6fpaNzrQYIUK1ekcORdy_wEF6_bbgfRm4u2Q/viewform?usp=publish-editor" 
+           target="_blank" 
+           class="btn-submit">
+            CLICK HERE TO SUBMIT TO SPREADSHEET
+        </a>
     </section>
 </main>
 
 <footer>
-    <p>Winter_Olympics_2026_ILC Project | Educational Resource for Students</p>
+    <p style="text-align: center; color: var(--deep-ice); padding: 20px;">© 2026 Winter Olympic Education Project</p>
 </footer>
-
-<script>
-    function setGrammarResult(msg) {
-        document.getElementById('grammar-feedback').innerText = msg;
-    }
-</script>
 
 </body>
 </html>
