@@ -1,1 +1,88 @@
- 
+/* General Setup */
+:root {
+    --ancient-gold: #d4af37;
+    --ancient-marble: #f4f1ea;
+    --winter-blue: #0077be;
+    --winter-ice: #e0f2f7;
+    --deep-text: #2c3e50;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--deep-text);
+    background-color: var(--ancient-marble);
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+header {
+    background: linear-gradient(135deg, var(--ancient-gold) 0%, var(--winter-blue) 100%);
+    color: white;
+    padding: 3rem 1rem;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Container & Layout */
+main {
+    max-width: 1000px;
+    margin: -20px auto 40px;
+    padding: 0 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin-bottom: 25px;
+    border-left: 5px solid var(--ancient-gold);
+}
+
+/* Specific styling for the Winter section */
+.winter-theme {
+    border-left: 5px solid var(--winter-blue);
+    background-color: var(--winter-ice);
+}
+
+/* Interactive Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+}
+
+th {
+    background-color: var(--deep-text);
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Responsive Grid for comparisons */
+.comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Mobile Friendly */
+@media (max-width: 600px) {
+    header h1 { font-size: 1.8rem; }
+    .comparison-grid { grid-template-columns: 1fr; }
+}
